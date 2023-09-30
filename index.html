@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!--para inserir o texto lorem, =lorem e enter-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="./estilos/style.css"> <!--essa tag serve para linkar o css a esse html-->
+</head>
+
+<body>
+    <header class="cabecalho"> <!--cabeçalho, diferente do head-->
+        <nav class="cabecalho__menu"> <!--tag para navegar dentro da página, links dentro da pagina-->
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="sobre mim.html">Sobre Mim</a>
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+        </nav>
+    </header>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <!--com essa tag section, cria um seção separada d imagem, pelo que entendi, pode fazer tipo blocos, para estilizar e posicionar no css-->
+            <h1 class="apresentacao__conteudo__titulo"> <!--é o título dessa página-->
+                Eleve seu negócio digital a outro nível <strong class="titulo-destaque"> um Front-end de
+                    qualidade!</strong>
+            </h1>
+            <p class="apresentacao__conteudo__texto">Olá! Sou Roseane, desenvolvedora Front-end com especialidade em
+                React, HTML e CSS.
+                Ajudo pequenos negócios e designers a colocarem em prática boas ideias.
+                Vamos conversar?</p>
+            <div class="apresentacao__links">
+                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
+                <!-- a div é somento visual, pra juntar os botões em um só lugar, não é nada com muito significado-->
+                <a class="apresentacao__links__navegacao" href="https://www.instagram.com/roseanemocali/"><img
+                        src="./assets/instagram.jpg"> Instagram</a>
+                <!--a é a tag ancora para links (por enquanto eu só sei que serve para isso)-->
+                <a class="apresentacao__links__navegacao" href="https://www.facebook.com/roseane.mocali/"><img
+                        class="facebook" src="./assets/facebook.jpg"> Facebook</a>
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src="./assets/roseane.jpg" alt="foto roseane">
+
+    </main> <!--conteudo principal, título, paragrafo, botoes, etc-->
+    <footer class="rodape__index">
+        <p>Desenvolvido por Roseane</p>
+    </footer> <!--rodapé da página-->
+</body>
+
+</html>

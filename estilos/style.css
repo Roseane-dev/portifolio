@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor--primaria: #000000;
+    --cor--secundaria: #f6f6f6;
+    --cor--terciaria: #64CCC5;
+    --cor--hover: #423F3E;
+    --fonte--primaria: 'Krona One', sans-serif;
+    --fonte--secundaria: 'montserrat', sans-serif;
+}
+
+* {
+    /*colocando esse asterisco e depois chaves, já seleciona todos os elemntos da sua página html, como se fosse para uma configuração geral*/
+    margin: 0;
+    /*tanto em margin e padding podem ser retirados colocando o ZERO, tira toda a margim entre a página e o conteudo, não terá todo o espaçamento. isso serve para que depois vc altere tudo do seu jeito.*/
+    padding: 0;
+}
+
+body {
+    /* height: 100vh; */
+    /*define a altura do corpo total da tela*/
+    /*Vh é viewport, colocando 100, fica 100% da tela*/
+    /*box-sinzing é para tudo ficar dentro da tela, do filho em relação ao elemento pai. Na definição border box, vc encolhe o conteudo para ele sempre esteja dentro do elemento pai*/
+    box-sizing: border-box;
+    /*para posicionar os elementos da forma que deseja, usa-se flexbox*/
+    background-color: var(--cor--primaria);
+    color: var(--cor--secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte--secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor--terciaria);
+    text-decoration: none;
+}
+
+/*com o flexbox, usa a propriedade para o pai display: flex - para ajustar todo o posicionamento do elemento pai ou container, procurar o guia de flexbox no google*/
+.apresentacao {
+    padding: 5% 15%;
+    /* margin: 10% 15%; */
+    display: flex;
+    align-items: center;
+    /*coloca todos os elementos no centro, alinhados entre eles mesmos (align-items:center*/
+    justify-content: space-between;
+    /*para melhorar a margem, para ajustar os elementos, coloca margin aqui*/
+    gap: 82px;
+
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    /*ajusta a largura do texto em questão*/
+    display: flex;
+    flex-direction: column;
+    /*o gap vai dizer o espaçamento de cada elemento filho*/
+    gap: 40px;
+    /*gap 65px ajustou na minha tela o footer, mas resolvi com tags aqui no elemento rodape*/
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte--primaria);
+}
+
+.titulo-destaque {
+    color: var(--cor--terciaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte--secundaria)
+}
+
+.link__alura {
+    text-decoration: none;
+    color: var(--cor--terciaria);
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte--primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor--terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor--secundaria);
+    font-family: var(--fonte--secundaria);
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor--hover);
+}
+
+.apresentacao__imagem {
+    width: 30%;
+}
+
+
+.rodape {
+    padding: 24px;
+    color: var(--cor--primaria);
+    background-color: var(--cor--terciaria);
+    text-align: center;
+    font-family: var(--fonte--secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    /*Utilizei o position: fixed para fixar o todo o rodapé da página no local onde ele está, mas precisei usar o bottom: 0 para definir que o rodapé deve iniciar da posição 0 da página, logo na parte inferior. Por fim, utilizei o width: 100% para restabelecer o tamanho do rodapé e dizer que ele deve ocupar todo o espaço de largura disponível para ele. Acho válido informar que, ao realizar essa ação você vai fixar o seu rodapé na sua visualização, logo o rodapé sempre estará visível durante a utilização do site.*/
+    /* position: fixed;
+    bottom: 0;
+    width: 100%;*/
+
+}
+
+.rodape__index {
+    padding: 24px;
+    color: var(--cor--primaria);
+    background-color: var(--cor--terciaria);
+    text-align: center;
+    font-family: var(--fonte--secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+
+    }
+
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+
+    .apresentacao__links__navegacao {
+        width: 50%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+        text-align: center;
+    }
+
+    .tirar__ponto {
+        list-style-position: inside;
+    }
+
+    .rodape__index {
+        padding: 24px;
+        color: var(--cor--primaria);
+        background-color: var(--cor--terciaria);
+        text-align: center;
+        font-family: var(--fonte--secundaria);
+        font-size: 1.5rem;
+        font-weight: 400;
+        position: relative;
+    }
+
+}
